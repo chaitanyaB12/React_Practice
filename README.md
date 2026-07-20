@@ -22,7 +22,7 @@ My goal is to build one React project every day to strengthen my frontend develo
 
 ## 📈 Progress
 
-- ✅ Completed: 1 Project
+- ✅ Completed: 2 Projects
 - 🎯 Goal: 30 React Projects
 
 ---
