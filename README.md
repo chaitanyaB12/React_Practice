@@ -18,6 +18,7 @@ My goal is to build one React project every day to strengthen my frontend develo
 | 1 | Counter App | ✅ Completed |
 | 2 | StopWatch App | ✅ Completed |
 | 3 | ProductCards App | ✅ Completed |
+| 4 | Movies App | ✅ Completed |
 
 ---
 
