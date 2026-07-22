@@ -10,24 +10,28 @@ function App() {
  const[search, setsearch]=useState('');
  const[loading, setloading]=useState(false);
  const [hasSearched, sethasSearched] = useState(false);
- const url = import.meta.env.VITE_movieapi
+ const url = `${import.meta.env.VITE_MOVIE_API}&s=${search}`;
 
 
- const fetchMovieData = async()=>{
-  try{
+ const fetchMovieData = async () => {
+  try {
     setloading(true);
     sethasSearched(true);
-    const res = await axios.get(import.meta.env.VITE_MOVIE_API);
-    const data =await res.json();
+
+    const res = await axios.get(url);
+
+    const data = res.data;
+
     console.log(data.Search);
+
     setAllMovieData(Array.isArray(data.Search) ? data.Search : []);
+  } catch (error) {
+    console.log(error);
+    setAllMovieData([]);
+  } finally {
     setloading(false);
-  } catch(error){
-      console.log(error);
-      setAllMovieData([]);
-      setloading(false);
   }
- };
+};
 
 
 

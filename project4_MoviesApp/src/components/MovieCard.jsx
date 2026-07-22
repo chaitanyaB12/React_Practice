@@ -5,7 +5,7 @@ function Moviecard({allMovieData, loading}) {
     <div>
          {loading ?
         <div className='flex justify-center '>
-          <img className=' w-16 py-20' src="https://i.gifer.com/ZZ5H.gif" alt="" />
+          <img className=' w-16 py-20' src="./loadimg.gif" alt="Loading" />
         </div>
          :
         <div className="main flex flex-wrap px-4 lg:px-10">
