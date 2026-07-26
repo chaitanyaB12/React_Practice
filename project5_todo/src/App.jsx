@@ -1,3 +1,4 @@
+import TodoList from "./compoents/TodoList"
 
 
 function App() {
@@ -6,8 +7,9 @@ function App() {
   return (
   <>
   <div>
-    Hello
+    <TodoList/>
   </div>
+    
   </>
   )
 }
