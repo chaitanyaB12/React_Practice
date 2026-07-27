@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { AiFillDelete } from "react-icons/ai";
 
 
 function TodoList() {
@@ -6,8 +7,13 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
 
   const addtodos = ()=>{
-    setTodos([...todos , todoitem])
+    if(todoitem.trim() === "") return
+    setTodos([...todos, todoitem]);
     setTodoItem("")
+  }
+
+  const DeleteTodo = (deleteindex)=>{
+    setTodos(todos.filter((_ ,index)=> index !== deleteindex))
   }
 
   return (
@@ -21,8 +27,9 @@ function TodoList() {
            
               {todos.map((item, index)=>{
                 return(
-                  <ul key={index}>
-                    <li>{item}</li>
+                  <ul className="flex justify-center items-center m-2  md:m-4 sm:m-1" key={index}>
+                    <li className="border w-sm h-10 flex items-center justify-center">{item}</li>
+                    <li className="ml-4"><button className=" text-2xl" onClick={()=>DeleteTodo(index)}><AiFillDelete/></button></li>
                   </ul>
                 )
             })}
