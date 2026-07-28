@@ -1,20 +1,39 @@
 import { useState } from "react"
-import { AiFillDelete } from "react-icons/ai";
+import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 
 function TodoList() {
   const [todoitem, setTodoItem] = useState("");
   const [todos, setTodos] = useState([]);
+  const[editIndex, setEditIndex] =useState(null);
 
   const addtodos = ()=>{
     if(todoitem.trim() === "") return
-    setTodos([...todos, todoitem]);
-    setTodoItem("")
+    if(editIndex === null){
+      setTodos([...todos, todoitem]);
+      setTodoItem("")
+    }else{
+      setTodos(todos.map((item, index)=> {
+        if(index === editIndex){
+         return todoitem
+        }
+        return item
+      }))
+    }
+      setTodoItem("")
+      setEditIndex(null)
+    
   }
 
   const DeleteTodo = (deleteindex)=>{
     setTodos(todos.filter((_ ,index)=> index !== deleteindex))
   }
+
+    const edittodo = (editidx)=>{
+      setEditIndex(editidx);
+      setTodoItem(todos[editIndex])
+      setTodos(todos)  
+    }
 
   return (
     <div className="bg-mist-700  text-yellow-400 h-screen pt-10">
@@ -27,9 +46,10 @@ function TodoList() {
            
               {todos.map((item, index)=>{
                 return(
-                  <ul className="flex justify-center items-center m-2  md:m-4 sm:m-1" key={index}>
+                  <ul className="flex justify-center items-center m-2 md:m-4 sm:m-1 text-2xl gap-2" key={index}>
                     <li className="border w-sm h-10 flex items-center justify-center">{item}</li>
-                    <li className="ml-4"><button className=" text-2xl" onClick={()=>DeleteTodo(index)}><AiFillDelete/></button></li>
+                    <li><button className=" text-2xl" onClick={()=>DeleteTodo(index)}><AiFillDelete/></button></li>                  
+                    <li><button className="text-2xl" onClick={()=>edittodo(index)}><AiFillEdit/></button></li>
                   </ul>
                 )
             })}
