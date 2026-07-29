@@ -31,7 +31,7 @@ function TodoList() {
 
     const edittodo = (editidx)=>{
       setEditIndex(editidx);
-      setTodoItem(todos[editIndex])
+      setTodoItem(todos[editidx])
         
     }
 
