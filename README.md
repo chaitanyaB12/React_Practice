@@ -20,12 +20,13 @@ My goal is to build one React project every day to strengthen my frontend develo
 | 3 | ProductCards App | ✅ Completed |
 | 4 | Movies App | ✅ Completed |
 | 5 | Todo App | ✅ Completed |
+| 6 | Weather App | ✅ Completed |
 
 ---
 
 ## 📈 Progress
 
-- ✅ Completed: 5 Projects
+- ✅ Completed: 6 Projects
 - 🎯 Goal: 30 React Projects
 
 ---
