@@ -1,34 +1,37 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
+
+
 
 
 const StopWatch = () => {
 
-    const [time, setTime] = useState(0)
+    const [time, setTime] = useState(0);
+    const intervalRef = useRef(null);
 
     const s =  Math.floor( (time/1000) % 60 )
     const m = Math.floor( (time/(1000 * 60)) % 60 )
     const h = Math.floor( (time / ( 1000 * 60 * 60 ) ) )
 
-    const formatTime = `Hours:${h} Mins:${m} Sec:${s}`
-
-    const intervalid = ()=>{
-        
-
-    }
+    const formatTime = `Hours:${String(h).padStart(2, "0")} Mins:${String(m).padStart(2, "0")} Sec:${String(s).padStart(2, "0")}`
 
     const handleStart = ()=>{
-   
-    }
+        if(intervalRef.current) return;
+
+        intervalRef.current =  setInterval(() => {
+            setTime((prev)=>prev+10)}, 10);
+          }
 
 
     const handlePause = ()=>{
-       
-
-        
+       clearInterval(intervalRef.current);
+       intervalRef.current = null        
     }
 
 
     const handleReset = ()=>{
+      clearInterval(intervalRef.current);
+      intervalRef.current= null;
+      setTime(0)
 
     }
 
@@ -51,3 +54,4 @@ const StopWatch = () => {
 }
 
 export default StopWatch
+
