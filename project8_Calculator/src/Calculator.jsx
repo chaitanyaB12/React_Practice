@@ -39,7 +39,7 @@ const Calculator = ()=>{
     return(
        <div className="bg-olive-600 min-h-screen flex justify-center items-center">
 
-        <div className="bg-mauve-500 h-72 lg:w-1/6 lg:w-1/2 sm:w-1/4 rounded-2xl">
+        <div className="bg-mauve-500 h-72 lg:w-1/6  sm:w-1/4 rounded-2xl">
         <div type="text" className="border-b h-14 rounded-2xl flex items-center justify-end px-3 text-3xl whitespace-nowrap overflow-x-auto">{input || "0"}</div>      
           <div className="grid grid-cols-4 gap-2 mt-4 ml-2">
              <button value="AC"  onClick={handleAllclear} className="border w-12" >AC</button>
