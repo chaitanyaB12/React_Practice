@@ -4,7 +4,7 @@ import { useReducer } from "react";
 
  const BasicForm = ()=>{
 
-    const BasicInfo ={
+     const BasicInfo ={
         name:"",
         email:"",
         age:"",
@@ -17,9 +17,9 @@ import { useReducer } from "react";
   
 
     return(
-       <form action="">
-        <div>
-            <p></p>
+       <form>
+        <div className="bg-indigo-800 h-screen">
+            <p>heelo</p>
             <p></p>
             <p></p>
             <p></p>
