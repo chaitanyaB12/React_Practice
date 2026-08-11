@@ -8,7 +8,7 @@ const Calculator = ()=>{
     const [input, setInput] = useState('');
 
     const operators = ["%", "*", "-", "+" , "/"]
-
+ 
     const handlebutton = (value)=>{
         const lastChar = input[input.length-1];
         if(operators.includes(value) && operators.includes(lastChar)){
