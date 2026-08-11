@@ -24,13 +24,14 @@ My goal is to build one React project every day to strengthen my frontend develo
 | 7 | StopWatch_Simple App | ✅ Completed |
 | 8 | Calculator App | ✅ Completed |
 | 9 | BasicForm App | ✅ Completed |
+| 10 | ShoppingCart App | ✅ Completed |
 
 
 ---
 
 ## 📈 Progress
 
-- ✅ Completed: 9 Projects
+- ✅ Completed: 10 Projects
 - 🎯 Goal: 30 React Projects
 
 ---
