@@ -25,13 +25,14 @@ My goal is to build one React project every day to strengthen my frontend develo
 | 8 | Calculator App | ✅ Completed |
 | 9 | BasicForm App | ✅ Completed |
 | 10 | ShoppingCart App | ✅ Completed |
+| 11 | BasicContext App | ✅ Completed |
 
 
 ---
 
 ## 📈 Progress
 
-- ✅ Completed: 10 Projects
+- ✅ Completed: 11 Projects
 - 🎯 Goal: 30 React Projects
 
 ---
